@@ -1,0 +1,13 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling" ]
+
+[project]
+name = "devcontainer"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [ ]
+scripts.devcontainer = "devcontainer.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/devcontainer"]

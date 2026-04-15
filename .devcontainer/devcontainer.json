@@ -1,0 +1,37 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
+    "remoteUser": "root",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "moby": false
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "tamasfe.even-better-toml",
+                "charliermarsh.ruff",
+                "continue.continue"
+            ],
+            "settings": {
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                "ruff.lineLength": 120,
+                "remote.localPortHost": "allInterfaces",
+                "editor.rulers": [120]
+            }
+        }
+    },
+    "forwardPorts": [8000, 12345],
+    "postCreateCommand": "/usr/share/devcontainer/postcreate.sh"
+}
