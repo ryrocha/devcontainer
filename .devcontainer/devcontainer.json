@@ -2,7 +2,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
+    "runArgs": ["--env-file", "/home/coder/devcontainer.env"],
     "remoteUser": "root",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
