@@ -4,15 +4,6 @@ This folder includes a **VS Code Dev Container** for a Docker‑in‑Docker work
 
 ## Quick start
 
-1. **Create an environment variable file named `devcontainer.env` in this folder with the following credentials:**
-
-   ```
-   GH_USER=<your-gh-username>
-   GH_TOKEN=<your-gh-personal-access-token>
-   ```
-
-   > Note that `GH_TOKEN` is used to authenticate to both GitHub Container Registry and the GitHub CLI. Make sure it includes the scopes described [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic) and [here](https://cli.github.com/manual/gh_auth_login), respectively.
-
 1. **Ensure SSH agent is ready** (for SSH‑cloned repos and private submodules, see [here](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys) for more context):
 
    ```sh
@@ -28,10 +19,6 @@ This folder includes a **VS Code Dev Container** for a Docker‑in‑Docker work
    ```
 
 1. **Open the folder in VS Code** and choose **“Dev Containers: Reopen in Container”** from the command pallette.
-
-## Common workflows
-
-- **Authenticate to GHCR: `ghcr-login`**
 
 ## Dotfiles support (customizing your terminal)
 
